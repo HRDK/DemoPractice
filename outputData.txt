@@ -1,0 +1,10 @@
+Attaching to java-chrome-1, java-firefox-1, selenium-hub
+selenium-hub    | 2023-06-13 10:48:09,341 INFO Included extra file "/etc/supervisor/conf.d/selenium-grid-hub.conf" during parsing
+selenium-hub    | 2023-06-13 10:48:09,344 INFO RPC interface 'supervisor' initialized
+selenium-hub    | 2023-06-13 10:48:09,344 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+selenium-hub    | 2023-06-13 10:48:09,344 INFO supervisord started with pid 000
+java-firefox-1  | 2023-06-13 10:48:09,602 INFO Included extra file "/etc/supervisor/conf.d/selenium.conf" during parsing
+java-firefox-1  | 2023-06-13 10:48:09,604 INFO RPC interface 'supervisor' initialized
+java-firefox-1  | 2023-06-13 10:48:09,604 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+java-firefox-1  | 2023-06-13 10:48:09,604 INFO supervisord started with pid 8
+supervisord started with pid 9000

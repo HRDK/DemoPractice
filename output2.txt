@@ -1,0 +1,233 @@
+
+Attaching to java-chrome-1, java-firefox-1, selenium-hub
+selenium-hub    | 2023-06-13 10:48:09,341 INFO Included extra file "/etc/supervisor/conf.d/selenium-grid-hub.conf" during parsing
+selenium-hub    | 2023-06-13 10:48:09,344 INFO RPC interface 'supervisor' initialized
+selenium-hub    | 2023-06-13 10:48:09,344 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+selenium-hub    | 2023-06-13 10:48:09,344 INFO supervisord started with pid 8
+java-firefox-1  | 2023-06-13 10:48:09,602 INFO Included extra file "/etc/supervisor/conf.d/selenium.conf" during parsing
+java-firefox-1  | 2023-06-13 10:48:09,604 INFO RPC interface 'supervisor' initialized
+java-firefox-1  | 2023-06-13 10:48:09,604 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+java-firefox-1  | 2023-06-13 10:48:09,604 INFO supervisord started with pid 8
+java-chrome-1   | 2023-06-13 10:48:09,701 INFO Included extra file "/etc/supervisor/conf.d/selenium.conf" during parsing
+java-chrome-1   | 2023-06-13 10:48:09,714 INFO RPC interface 'supervisor' initialized
+java-chrome-1   | 2023-06-13 10:48:09,714 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+java-chrome-1   | 2023-06-13 10:48:09,716 INFO supervisord started with pid 8
+selenium-hub    | 2023-06-13 10:48:10,351 INFO spawned: 'selenium-grid-hub' with pid 9
+selenium-hub    | Tracing is disabled
+selenium-hub    | 2023-06-13 10:48:10,376 INFO success: selenium-grid-hub entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+java-firefox-1  | 2023-06-13 10:48:10,607 INFO spawned: 'xvfb' with pid 9
+java-firefox-1  | 2023-06-13 10:48:10,608 INFO spawned: 'vnc' with pid 10
+java-firefox-1  | 2023-06-13 10:48:10,610 INFO spawned: 'novnc' with pid 11
+java-firefox-1  | 2023-06-13 10:48:10,613 INFO spawned: 'selenium-node' with pid 12
+java-firefox-1  | 2023-06-13 10:48:10,638 INFO success: selenium-node entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+selenium-hub    | 10:48:10.706 INFO [LoggingOptions.configureLogEncoding] - Using the system default encoding
+selenium-hub    | 10:48:10.709 INFO [OpenTelemetryTracer.createTracer] - Using OpenTelemetry for tracing
+java-chrome-1   | 2023-06-13 10:48:10,720 INFO spawned: 'xvfb' with pid 9
+java-chrome-1   | 2023-06-13 10:48:10,724 INFO spawned: 'vnc' with pid 10
+java-chrome-1   | 2023-06-13 10:48:10,730 INFO spawned: 'novnc' with pid 14
+java-chrome-1   | 2023-06-13 10:48:10,736 INFO spawned: 'selenium-node' with pid 19
+java-chrome-1   | 2023-06-13 10:48:10,758 INFO success: selenium-node entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+selenium-hub    | 10:48:10.797 INFO [BoundZmqEventBus.<init>] - XPUB binding to [binding to tcp://*:4442, advertising as tcp://172.19.0.2:4442], XSUB binding to [binding to tcp://*:4443, advertising as tcp://172.19.0.2:4443]
+selenium-hub    | 10:48:10.870 INFO [UnboundZmqEventBus.<init>] - Connecting to tcp://172.19.0.2:4442 and tcp://172.19.0.2:4443
+selenium-hub    | 10:48:10.892 INFO [UnboundZmqEventBus.<init>] - Sockets created
+java-firefox-1  | Generating Selenium Config
+java-firefox-1  | Configuring server...
+java-firefox-1  | Setting up SE_NODE_HOST...
+java-firefox-1  | Setting up SE_NODE_PORT...
+java-firefox-1  | Setting up SE_NODE_GRID_URL...
+java-firefox-1  | Tracing is disabled
+java-firefox-1  | Selenium Grid Node configuration: 
+java-firefox-1  | [events]
+java-firefox-1  | publish = "tcp://selenium-hub:4442"
+java-firefox-1  | subscribe = "tcp://selenium-hub:4443"
+java-firefox-1  | 
+java-firefox-1  | [node]
+java-firefox-1  | session-timeout = "300"
+java-firefox-1  | override-max-sessions = false
+java-firefox-1  | detect-drivers = false
+java-firefox-1  | drain-after-session-count = 0
+java-firefox-1  | max-sessions = 1
+java-firefox-1  | 
+java-firefox-1  | [[node.driver-configuration]]
+java-firefox-1  | display-name = "firefox"
+java-firefox-1  | stereotype = '{"browserName": "firefox", "browserVersion": "112.0", "platformName": "Linux"}'
+java-firefox-1  | max-sessions = 1
+java-firefox-1  | 
+java-firefox-1  | Starting Selenium Grid Node...
+java-chrome-1   | Generating Selenium Config
+java-chrome-1   | Configuring server...
+java-chrome-1   | Setting up SE_NODE_HOST...
+java-chrome-1   | Setting up SE_NODE_PORT...
+java-chrome-1   | Setting up SE_NODE_GRID_URL...
+java-chrome-1   | find: '/home/seluser/.config/chromium/Crash Reports/pending/': No such file or directory
+java-chrome-1   | Tracing is disabled
+java-chrome-1   | Selenium Grid Node configuration: 
+java-chrome-1   | [events]
+java-chrome-1   | publish = "tcp://selenium-hub:4442"
+java-chrome-1   | subscribe = "tcp://selenium-hub:4443"
+java-chrome-1   | 
+java-chrome-1   | [node]
+java-chrome-1   | session-timeout = "300"
+java-chrome-1   | override-max-sessions = false
+java-chrome-1   | detect-drivers = false
+java-chrome-1   | drain-after-session-count = 0
+java-chrome-1   | max-sessions = 1
+java-chrome-1   | 
+java-chrome-1   | [[node.driver-configuration]]
+java-chrome-1   | display-name = "chrome"
+java-chrome-1   | stereotype = '{"browserName": "chrome", "browserVersion": "113.0", "platformName": "Linux"}'
+java-chrome-1   | max-sessions = 1
+java-chrome-1   | 
+java-chrome-1   | Starting Selenium Grid Node...
+java-firefox-1  | 10:48:11.512 INFO [LoggingOptions.configureLogEncoding] - Using the system default encoding
+java-firefox-1  | 10:48:11.517 INFO [OpenTelemetryTracer.createTracer] - Using OpenTelemetry for tracing
+java-firefox-1  | 10:48:11.626 INFO [UnboundZmqEventBus.<init>] - Connecting to tcp://selenium-hub:4442 and tcp://selenium-hub:4443
+java-firefox-1  | 2023-06-13 10:48:11,626 INFO success: xvfb entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+java-firefox-1  | 2023-06-13 10:48:11,626 INFO success: vnc entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+java-firefox-1  | 2023-06-13 10:48:11,626 INFO success: novnc entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+java-firefox-1  | 10:48:11.754 INFO [UnboundZmqEventBus.<init>] - Sockets created
+java-chrome-1   | 2023-06-13 10:48:11,774 INFO success: xvfb entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+java-chrome-1   | 2023-06-13 10:48:11,774 INFO success: vnc entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+java-chrome-1   | 2023-06-13 10:48:11,775 INFO success: novnc entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+java-chrome-1   | 10:48:11.829 INFO [LoggingOptions.configureLogEncoding] - Using the system default encoding
+java-chrome-1   | 10:48:11.831 INFO [OpenTelemetryTracer.createTracer] - Using OpenTelemetry for tracing
+java-chrome-1   | 10:48:11.896 INFO [UnboundZmqEventBus.<init>] - Connecting to tcp://selenium-hub:4442 and tcp://selenium-hub:4443
+selenium-hub    | 10:48:11.893 INFO [UnboundZmqEventBus.<init>] - Event bus ready
+java-chrome-1   | 10:48:11.996 INFO [UnboundZmqEventBus.<init>] - Sockets created
+selenium-hub    | 10:48:12.431 INFO [Hub.execute] - Started Selenium Hub 4.9.1 (revision eb2032df7f): http://172.19.0.2:4444
+java-firefox-1  | 10:48:12.774 INFO [UnboundZmqEventBus.<init>] - Event bus ready
+java-firefox-1  | 10:48:12.870 INFO [NodeServer.createHandlers] - Reporting self as: http://172.19.0.3:5555
+java-firefox-1  | 10:48:12.883 INFO [NodeOptions.getSessionFactories] - Detected 5 available processors
+java-firefox-1  | 10:48:12.917 INFO [NodeOptions.report] - Adding firefox for {"browserName": "firefox","browserVersion": "112.0","platformName": "linux","se:noVncPort": 7900,"se:vncEnabled": true} 1 times (Host)
+java-firefox-1  | 10:48:12.927 INFO [Node.<init>] - Binding additional locator mechanisms: relative
+java-chrome-1   | 10:48:12.999 INFO [UnboundZmqEventBus.<init>] - Event bus ready
+java-firefox-1  | 10:48:13.063 INFO [NodeServer$1.start] - Starting registration process for Node http://172.19.0.3:5555
+java-firefox-1  | 10:48:13.063 INFO [NodeServer.execute] - Started Selenium node 4.9.1 (revision eb2032df7f): http://172.19.0.3:5555
+java-chrome-1   | 10:48:13.072 INFO [NodeServer.createHandlers] - Reporting self as: http://172.19.0.4:5555
+java-firefox-1  | 10:48:13.073 INFO [NodeServer$1.lambda$start$1] - Sending registration event...
+java-chrome-1   | 10:48:13.090 INFO [NodeOptions.getSessionFactories] - Detected 5 available processors
+selenium-hub    | 10:48:13.108 INFO [Node.<init>] - Binding additional locator mechanisms: relative
+java-chrome-1   | 10:48:13.125 INFO [NodeOptions.report] - Adding chrome for {"browserName": "chrome","browserVersion": "113.0","platformName": "linux","se:noVncPort": 7900,"se:vncEnabled": true} 1 times (Host)
+java-chrome-1   | 10:48:13.137 INFO [Node.<init>] - Binding additional locator mechanisms: relative
+java-chrome-1   | 10:48:13.284 INFO [NodeServer$1.start] - Starting registration process for Node http://172.19.0.4:5555
+java-chrome-1   | 10:48:13.285 INFO [NodeServer.execute] - Started Selenium node 4.9.1 (revision eb2032df7f): http://172.19.0.4:5555
+java-chrome-1   | 10:48:13.297 INFO [NodeServer$1.lambda$start$1] - Sending registration event...
+selenium-hub    | 10:48:13.382 INFO [GridModel.setAvailability] - Switching Node 42eb43eb-52a1-4d6e-8c30-7f1b1db4fc12 (uri: http://172.19.0.3:5555) from DOWN to UP
+selenium-hub    | 10:48:13.382 INFO [LocalDistributor.add] - Added node 42eb43eb-52a1-4d6e-8c30-7f1b1db4fc12 at http://172.19.0.3:5555. Health check every 120s
+java-firefox-1  | 10:48:13.386 INFO [NodeServer.lambda$createHandlers$2] - Node has been added
+selenium-hub    | 10:48:13.387 INFO [Node.<init>] - Binding additional locator mechanisms: relative
+selenium-hub    | 10:48:13.465 INFO [GridModel.setAvailability] - Switching Node 7ec45929-3858-4fd7-8bb8-2c90ec7ae4ed (uri: http://172.19.0.4:5555) from DOWN to UP
+selenium-hub    | 10:48:13.466 INFO [LocalDistributor.add] - Added node 7ec45929-3858-4fd7-8bb8-2c90ec7ae4ed at http://172.19.0.4:5555. Health check every 120s
+java-chrome-1   | 10:48:13.469 INFO [NodeServer.lambda$createHandlers$2] - Node has been added
+selenium-hub    | 11:08:27.409 INFO [GridModel.purgeDeadNodes] - Switching Node http://172.19.0.3:5555 from UP to DOWN
+selenium-hub    | 11:08:27.414 INFO [GridModel.purgeDeadNodes] - Switching Node http://172.19.0.4:5555 from UP to DOWN
+selenium-hub    | 11:09:57.454 INFO [GridModel.setAvailability] - Switching Node 42eb43eb-52a1-4d6e-8c30-7f1b1db4fc12 (uri: http://172.19.0.3:5555) from DOWN to UP
+selenium-hub    | 11:09:57.499 INFO [GridModel.setAvailability] - Switching Node 7ec45929-3858-4fd7-8bb8-2c90ec7ae4ed (uri: http://172.19.0.4:5555) from DOWN to UP
+Attaching to java-chrome-1, java-firefox-1, selenium-hub
+java-chrome-1   | 2023-06-13 11:13:47,951 INFO Included extra file "/etc/supervisor/conf.d/selenium.conf" during parsing
+java-firefox-1  | 2023-06-13 11:13:47,958 INFO Included extra file "/etc/supervisor/conf.d/selenium.conf" during parsing
+java-firefox-1  | 2023-06-13 11:13:47,960 INFO RPC interface 'supervisor' initialized
+java-firefox-1  | 2023-06-13 11:13:47,960 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+java-firefox-1  | 2023-06-13 11:13:47,960 INFO supervisord started with pid 8
+java-chrome-1   | 2023-06-13 11:13:47,962 INFO RPC interface 'supervisor' initialized
+java-chrome-1   | 2023-06-13 11:13:47,962 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+java-chrome-1   | 2023-06-13 11:13:47,962 INFO supervisord started with pid 8
+java-firefox-1  | 2023-06-13 11:13:48,970 INFO spawned: 'xvfb' with pid 9
+java-firefox-1  | 2023-06-13 11:13:48,975 INFO spawned: 'vnc' with pid 10
+java-chrome-1   | 2023-06-13 11:13:48,969 INFO spawned: 'xvfb' with pid 9
+java-chrome-1   | 2023-06-13 11:13:48,975 INFO spawned: 'vnc' with pid 10
+java-chrome-1   | 2023-06-13 11:13:48,981 INFO spawned: 'novnc' with pid 11
+java-firefox-1  | 2023-06-13 11:13:48,981 INFO spawned: 'novnc' with pid 11
+java-chrome-1   | 2023-06-13 11:13:48,983 INFO spawned: 'selenium-node' with pid 12
+java-firefox-1  | 2023-06-13 11:13:48,985 INFO spawned: 'selenium-node' with pid 12
+java-chrome-1   | 2023-06-13 11:13:49,009 INFO success: selenium-node entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+java-firefox-1  | 2023-06-13 11:13:49,009 INFO success: selenium-node entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+java-chrome-1   | Generating Selenium Config
+java-chrome-1   | Configuring server...
+java-chrome-1   | Setting up SE_NODE_HOST...
+java-chrome-1   | Setting up SE_NODE_PORT...
+java-chrome-1   | Setting up SE_NODE_GRID_URL...
+java-firefox-1  | Generating Selenium Config
+java-firefox-1  | Configuring server...
+java-firefox-1  | Setting up SE_NODE_HOST...
+java-firefox-1  | Setting up SE_NODE_PORT...
+java-firefox-1  | Setting up SE_NODE_GRID_URL...
+java-chrome-1   | find: '/home/seluser/.config/chromium/Crash Reports/pending/': No such file or directory
+java-firefox-1  | Tracing is disabled
+java-firefox-1  | Selenium Grid Node configuration: 
+java-firefox-1  | [events]
+java-firefox-1  | publish = "tcp://selenium-hub:4442"
+java-firefox-1  | subscribe = "tcp://selenium-hub:4443"
+java-firefox-1  | 
+java-firefox-1  | [node]
+java-firefox-1  | session-timeout = "300"
+java-firefox-1  | override-max-sessions = false
+java-firefox-1  | detect-drivers = false
+java-firefox-1  | drain-after-session-count = 0
+java-firefox-1  | max-sessions = 1
+java-firefox-1  | 
+java-firefox-1  | [[node.driver-configuration]]
+java-firefox-1  | display-name = "firefox"
+java-firefox-1  | stereotype = '{"browserName": "firefox", "browserVersion": "112.0", "platformName": "Linux"}'
+java-firefox-1  | max-sessions = 1
+java-firefox-1  | 
+java-firefox-1  | Starting Selenium Grid Node...
+java-chrome-1   | Tracing is disabled
+java-chrome-1   | Selenium Grid Node configuration: 
+java-chrome-1   | [events]
+java-chrome-1   | publish = "tcp://selenium-hub:4442"
+java-chrome-1   | subscribe = "tcp://selenium-hub:4443"
+java-chrome-1   | 
+java-chrome-1   | [node]
+java-chrome-1   | session-timeout = "300"
+java-chrome-1   | override-max-sessions = false
+java-chrome-1   | detect-drivers = false
+java-chrome-1   | drain-after-session-count = 0
+java-chrome-1   | max-sessions = 1
+java-chrome-1   | 
+java-chrome-1   | [[node.driver-configuration]]
+java-chrome-1   | display-name = "chrome"
+java-chrome-1   | stereotype = '{"browserName": "chrome", "browserVersion": "113.0", "platformName": "Linux"}'
+java-chrome-1   | max-sessions = 1
+java-chrome-1   | 
+java-chrome-1   | Starting Selenium Grid Node...
+java-firefox-1  | 11:13:49.699 INFO [LoggingOptions.configureLogEncoding] - Using the system default encoding
+java-firefox-1  | 11:13:49.701 INFO [OpenTelemetryTracer.createTracer] - Using OpenTelemetry for tracing
+java-chrome-1   | 11:13:49.750 INFO [LoggingOptions.configureLogEncoding] - Using the system default encoding
+java-chrome-1   | 11:13:49.753 INFO [OpenTelemetryTracer.createTracer] - Using OpenTelemetry for tracing
+java-firefox-1  | 11:13:49.777 INFO [UnboundZmqEventBus.<init>] - Connecting to tcp://selenium-hub:4442 and tcp://selenium-hub:4443
+java-chrome-1   | 11:13:49.816 INFO [UnboundZmqEventBus.<init>] - Connecting to tcp://selenium-hub:4442 and tcp://selenium-hub:4443
+java-firefox-1  | 11:13:49.841 INFO [UnboundZmqEventBus.<init>] - Sockets created
+java-chrome-1   | 11:13:49.864 INFO [UnboundZmqEventBus.<init>] - Sockets created
+java-chrome-1   | 2023-06-13 11:13:50,020 INFO success: xvfb entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+java-chrome-1   | 2023-06-13 11:13:50,020 INFO success: vnc entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+java-firefox-1  | 2023-06-13 11:13:50,020 INFO success: xvfb entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+java-firefox-1  | 2023-06-13 11:13:50,020 INFO success: vnc entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+java-firefox-1  | 2023-06-13 11:13:50,020 INFO success: novnc entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+java-chrome-1   | 2023-06-13 11:13:50,020 INFO success: novnc entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+java-firefox-1  | 11:13:50.845 INFO [UnboundZmqEventBus.<init>] - Event bus ready
+java-chrome-1   | 11:13:50.871 INFO [UnboundZmqEventBus.<init>] - Event bus ready
+java-chrome-1   | 11:13:50.950 INFO [NodeServer.createHandlers] - Reporting self as: http://172.19.0.3:5555
+java-firefox-1  | 11:13:50.951 INFO [NodeServer.createHandlers] - Reporting self as: http://172.19.0.4:5555
+java-firefox-1  | 11:13:50.962 INFO [NodeOptions.getSessionFactories] - Detected 5 available processors
+java-chrome-1   | 11:13:50.963 INFO [NodeOptions.getSessionFactories] - Detected 5 available processors
+java-chrome-1   | 11:13:50.990 INFO [NodeOptions.report] - Adding chrome for {"browserName": "chrome","browserVersion": "113.0","platformName": "linux","se:noVncPort": 7900,"se:vncEnabled": true} 1 times (Host)
+java-firefox-1  | 11:13:50.990 INFO [NodeOptions.report] - Adding firefox for {"browserName": "firefox","browserVersion": "112.0","platformName": "linux","se:noVncPort": 7900,"se:vncEnabled": true} 1 times (Host)
+java-firefox-1  | 11:13:51.000 INFO [Node.<init>] - Binding additional locator mechanisms: relative
+java-chrome-1   | 11:13:51.001 INFO [Node.<init>] - Binding additional locator mechanisms: relative
+java-chrome-1   | 11:13:51.109 INFO [NodeServer$1.start] - Starting registration process for Node http://172.19.0.3:5555
+java-chrome-1   | 11:13:51.110 INFO [NodeServer.execute] - Started Selenium node 4.9.1 (revision eb2032df7f): http://172.19.0.3:5555
+java-firefox-1  | 11:13:51.110 INFO [NodeServer$1.start] - Starting registration process for Node http://172.19.0.4:5555
+java-firefox-1  | 11:13:51.111 INFO [NodeServer.execute] - Started Selenium node 4.9.1 (revision eb2032df7f): http://172.19.0.4:5555
+java-chrome-1   | 11:13:51.118 INFO [NodeServer$1.lambda$start$1] - Sending registration event...
+java-firefox-1  | 11:13:51.119 INFO [NodeServer$1.lambda$start$1] - Sending registration event...
+selenium-hub    | 11:13:51.133 INFO [Node.<init>] - Binding additional locator mechanisms: relative
+selenium-hub    | 11:13:51.215 INFO [GridModel.add] - Re-adding node with id 056dc8c3-c18f-4d68-a699-2bf6751f3e77 and URI http://172.19.0.3:5555.
+selenium-hub    | 11:13:51.217 INFO [GridModel.setAvailability] - Switching Node 056dc8c3-c18f-4d68-a699-2bf6751f3e77 (uri: http://172.19.0.3:5555) from DOWN to UP
+selenium-hub    | 11:13:51.217 INFO [LocalDistributor.add] - Added node 056dc8c3-c18f-4d68-a699-2bf6751f3e77 at http://172.19.0.3:5555. Health check every 120s
+selenium-hub    | 11:13:51.218 INFO [Node.<init>] - Binding additional locator mechanisms: relative
+java-chrome-1   | 11:13:51.223 INFO [NodeServer.lambda$createHandlers$2] - Node has been added
+selenium-hub    | 11:13:51.295 INFO [GridModel.add] - Re-adding node with id 2e83871d-92b5-4f68-9f1b-f4670cdd948c and URI http://172.19.0.4:5555.
+selenium-hub    | 11:13:51.296 INFO [GridModel.setAvailability] - Switching Node 2e83871d-92b5-4f68-9f1b-f4670cdd948c (uri: http://172.19.0.4:5555) from DOWN to UP
+java-firefox-1  | 11:13:51.298 INFO [NodeServer.lambda$createHandlers$2] - Node has been added
+selenium-hub    | 11:13:51.296 INFO [LocalDistributor.add] - Added node 2e83871d-92b5-4f68-9f1b-f4670cdd948c at http://172.19.0.4:5555. Health check every 120s

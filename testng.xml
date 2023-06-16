@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="/Users/hardik1.wadher/Documents/Repository/DemoPractice/src/test/java/org/Demo">
+        <classes>
+            <class name="org.Demo.RunDockerHub1"/>
+            <class name="org.Demo.RunDockerHub2">
+            </class>
+        </classes>
+    </test>
+</suite>
