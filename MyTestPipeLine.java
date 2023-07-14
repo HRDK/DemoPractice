@@ -26,6 +26,6 @@ public class MyTestPipeLine {
 //        actions.moveToElement(element1).click().build().perform();
         driver.findElement(By.id("disclaimerAgree")).click();
         driver.findElement(By.xpath("//button[@type='button']//span[contains(text(),'Save')]")).click();
-//        driver.close();
+        driver.close();
     }
 }
